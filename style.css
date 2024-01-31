@@ -1,0 +1,242 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header {
+  background-color: rgba(102,118,138,255);
+}
+
+header * {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
+nav, nav > ul {
+  width: 100%;
+  padding: 0;
+}
+
+nav > ul > li {
+  width: 33.3333%;
+  padding: 3%;
+}
+
+nav > ul > li > ul > li {
+  width: 50%;
+  padding: 1%;
+}
+
+nav button {
+  float: right;
+  width: 50%;
+  padding: 2%;
+  background-color: white;
+  color:rgba(102,118,138,255);
+}
+
+nav img {
+  width: 30%;
+  margin: 0 35%;
+}
+
+nav > :nth-child(2) {
+  display: none;
+}
+
+nav > :nth-child(2) > * {
+  width: 25%;
+}
+
+header + section {
+  background-color: rgba(102,118,138,255);
+  color: white;
+  text-align: center;
+  padding: 1% 5% 7% 5%;
+  text-decoration: none;
+}
+
+header + section > *{
+  padding: 3% 1%;
+  color: white;
+}
+
+header + section + section, header + section + section + section + section {
+  padding: 10% 22%;
+  text-align: center;
+}
+
+header + section + section > *, header + section + section + section + section > * {
+  margin-bottom: 3%;
+}
+
+header + section + section + section {
+  padding: 7% 10%;
+  background-color: rgba(105, 84, 117, 0.411);
+}
+
+header + section + section + section > * {
+  width: 50%;
+  padding: 5%;
+  text-align: center;
+}
+
+header + section + section + section > section > * {
+  padding: 4% 0;
+}
+
+header + section + section + section img {
+  width: 84%;
+  margin: 0 8%;
+}
+
+header + section + section + section button, header + section + section + section + section button {
+  width: 50%;
+  margin: 0 25%;
+  background-color: inherit;
+  padding: 2% 0;
+}
+
+footer {
+  background-color: rgb(59, 3, 61);
+}
+
+footer * {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  padding: 2%;
+}
+
+footer > * {
+  padding: 5%;
+}
+
+footer > section {
+  width: 50%;
+}
+
+footer ul {
+  width: 40%;
+}
+
+footer > :nth-child(1) > :nth-child(1) > * {
+  width: 33.3333%;
+}
+
+footer section + section * * {
+  padding: 0;
+}
+
+footer section + section * {
+  text-align: right;
+}
+
+footer hr {
+  background-color: white;
+  padding: 1px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+footer > span {
+  width: 85%;
+}
+
+footer > img {
+  width: 13%;
+  float: right;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (max-width: 650px) {
+  nav > :nth-child(1) {
+    display: none;
+  }
+
+  nav > :nth-child(2) {
+    display: block;
+  }
+
+  nav button {
+    width: 100%;
+  }
+
+  nav img {
+    width: 80%;
+    margin: 0 10%;
+  }
+}
+
+@media screen and (max-width:525px) {
+  footer section, footer ul, footer span {
+    width: 100%;
+  }
+  
+  footer section *, footer section + section *, footer span {
+    text-align: center;
+  }
+
+  footer section ul:nth-child(1){
+    padding: 2% 25%;
+  }
+
+  footer > img {
+    display: none;
+  }
+
+  footer section + section {
+    padding-top: 0
+  }
+}
+
+@media screen and (max-width: 425px) {
+  nav > :nth-child(2) > :nth-child(3) {
+    display: none;
+  }
+  
+  nav > :nth-child(2) > :nth-child(4) {
+    float: right;
+    width: 40%;
+    padding-top: 1%;
+  }
+}
